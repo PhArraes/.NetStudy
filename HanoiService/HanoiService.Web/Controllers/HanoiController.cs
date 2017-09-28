@@ -92,7 +92,7 @@ namespace HanoiService.Web.Controllers
                 r.ReasonPhrase = "Id não encontrado ou não foi possível completar a sua execução.";
                 return r;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 r = Request.CreateResponse();
                 r.StatusCode = HttpStatusCode.InternalServerError;
@@ -118,7 +118,7 @@ namespace HanoiService.Web.Controllers
                 return Ok(_historyService.GetHistoryPaged(page.Index, page.Size));
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return InternalServerError();
             }
