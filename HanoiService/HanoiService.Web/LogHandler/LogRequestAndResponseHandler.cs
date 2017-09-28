@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace HanoiService.Web.Log
+namespace HanoiService.Web.LogHandler
 {
     //font:https://stackoverflow.com/questions/23660340/need-to-log-asp-net-webapi-2-request-and-response-body-to-a-database
     public class LogRequestAndResponseHandler : DelegatingHandler

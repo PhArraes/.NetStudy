@@ -1,4 +1,4 @@
-﻿using HanoiService.Web.Log;
+﻿using HanoiService.Web.LogHandler;
 using System;
 using System.Collections.Generic;
 using System.Linq;
