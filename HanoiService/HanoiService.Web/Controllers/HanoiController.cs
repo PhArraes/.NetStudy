@@ -25,7 +25,7 @@ namespace HanoiService.Web.Controllers
             _historyService = histService;
         }
 
-        // GET api/values/5
+        //Método GET para facilitar teste
         public IHttpActionResult Get(int id)
         {
             try
@@ -39,7 +39,6 @@ namespace HanoiService.Web.Controllers
                 if (!_manager.TryStartHanoiThread(id, out newID))
                 {
                     return StatusCode(HttpStatusCode.ServiceUnavailable);
-                    //return InternalServerError(new Exception("Serviço sobrecarregado, tente novamente mais tarde."));
                 }
                 return Ok(newID);
             }
@@ -49,8 +48,7 @@ namespace HanoiService.Web.Controllers
             }
 
         }
-
-        // GET api/values/5
+        
         [Route("api/hanoi/stateText/{id}")]
         public IHttpActionResult GetState(int id)
         {
